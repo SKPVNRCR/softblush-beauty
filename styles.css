@@ -1,0 +1,203 @@
+/*
+  styles.css
+
+  This stylesheet defines the visual appearance of the Softblush Beauty
+  coming‑soon webpage. It relies heavily on modern CSS layout features
+  such as flexbox and media queries to ensure the page adapts gracefully
+  across different screen sizes. Colours were chosen to complement the
+  pastel background artwork included in the project assets.
+*/
+
+/* Reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #572c28; /* dark chocolate for high contrast against the pastel background */
+  background-color: #fff8f6; /* subtle off‑white so images blend seamlessly */
+  scroll-behavior: smooth;
+}
+
+/* Utility container for consistent horizontal padding */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('assets/background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 3rem 1.5rem;
+  border-radius: 1rem;
+  max-width: 700px;
+  backdrop-filter: blur(5px);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .launch {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #fff5f2;
+  border: 2px solid #572c28;
+  color: #572c28;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero .btn:hover {
+  background-color: #572c28;
+  color: #fff5f2;
+}
+
+/* Contact section */
+.contact {
+  background-color: #fff5f2;
+  color: #572c28;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact .contact-link {
+  color: #572c28;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.contact .contact-link:hover {
+  color: #8d4033;
+}
+
+/* Footer */
+.footer {
+  background-color: #fff1ec;
+  color: #572c28;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.footer .footer-link {
+  color: #572c28;
+  text-decoration: underline;
+}
+
+/* Waitlist section */
+.waitlist {
+  background-color: #fff7f5;
+  color: #572c28;
+  padding: 2.5rem 1rem 3rem;
+  text-align: center;
+}
+.waitlist h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.waitlist form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.waitlist .form-group {
+  width: 100%;
+  max-width: 500px;
+}
+.waitlist input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d9b9b6;
+  border-radius: 9999px;
+  font-size: 1rem;
+  outline: none;
+  color: #572c28;
+  background-color: #fff;
+}
+.waitlist input::placeholder {
+  color: #a98785;
+}
+.waitlist .submit-btn {
+  margin-top: 0.5rem;
+  background-color: #fff5f2;
+  border: 2px solid #572c28;
+  color: #572c28;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.waitlist .submit-btn:hover {
+  background-color: #572c28;
+  color: #fff5f2;
+}
+.waitlist .form-note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #75564f;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  .hero .launch {
+    font-size: 1rem;
+  }
+}

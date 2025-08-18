@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Softblush Beauty</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      Hero section
+
+      This section uses a full‑width background image to create an eye‑catching
+      introduction. The overlay class applies a semi‑transparent colour so
+      that the text remains legible over the pastel artwork. All of the
+      headline and call‑to‑action copy was taken from the original Canva
+      landing page referenced by the user request. The text remains editable
+      so that future changes can be made without having to regenerate the
+      background image.
+    -->
+    <header class="hero">
+      <div class="overlay">
+        <h1>
+          Softblush Beauty is almost here — get ready to create your day.
+        </h1>
+        <p class="subtitle">
+          Be the first to experience <strong>Softblush Beauty</strong>
+        </p>
+        <p class="launch">Launching this September!</p>
+        <!-- The button now links to the waitlist form below. -->
+        <a href="#waitlist" class="btn">Join the Waitlist</a>
+      </div>
+    </header>
+
+    <!--
+      Waitlist section
+
+      This form allows visitors to register their interest and join a
+      waitlist for updates. When submitted it triggers a mailto link to the
+      provided email address, which opens the visitor's email client with
+      the form contents pre‑populated. This avoids the need for a server
+      back‑end while still collecting contact details.
+    -->
+    <section id="waitlist" class="waitlist">
+      <div class="container">
+        <h2>Join the Waitlist</h2>
+        <form
+          action="mailto:koushik@supergram.in?subject=Softblush%20Beauty%20Waitlist"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              name="Name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="Email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <button type="submit" class="btn submit-btn">
+            Join the Waitlist
+          </button>
+        </form>
+        <p class="form-note">
+          You'll receive updates on the launch date and exclusive offers.
+        </p>
+      </div>
+    </section>
+
+    <!--
+      Contact section
+
+      Provide a simple way for visitors to learn how to get in touch. The
+      contact details mirror those visible on the Canva site, including
+      location and an email link. Feel free to update these values
+      if different information is required.
+    -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          Email:
+          <a href="mailto:koushik@supergram.in" class="contact-link"
+            >koushik@supergram.in</a
+          >
+        </p>
+        <p>Address: Bangalore, Karnataka, India, 560095</p>
+      </div>
+    </section>
+
+    <!--
+      Footer
+
+      Contains copyright information and a link for terms & support. In a
+      production site these links would point to dedicated pages.
+    -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Softblush Beauty. All rights reserved.</p>
+        <p>
+          <a href="#" class="footer-link">Terms &amp; Support</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
