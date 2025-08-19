@@ -1,5 +1,5 @@
 /*
- * Client side logic for the SoftBlush Beauty landing page. This script
+ * Client side logic for the Supergram landing page. This script
  * manages modal visibility, validates form input, posts data to a
  * Google Apps Script Web App, and maintains a local cache of signups.
  *
@@ -62,7 +62,7 @@
   // empty array.
   function readLocalSignups() {
     try {
-      const raw = localStorage.getItem('softblushSignups');
+      const raw = localStorage.getItem('supergramSignups');
       return raw ? JSON.parse(raw) : [];
     } catch (e) {
       return [];
@@ -72,7 +72,7 @@
   // Write signups to localStorage.
   function writeLocalSignups(list) {
     try {
-      localStorage.setItem('softblushSignups', JSON.stringify(list));
+      localStorage.setItem('supergramSignups', JSON.stringify(list));
     } catch (e) {
       // Most browsers allow ~5MB in localStorage. If we run into quota
       // limitations, fail silently—the network submission may still work.
@@ -133,7 +133,7 @@
       name: name,
       email: email,
       honeypot: honeypot,
-      source: 'softblush-landing',
+      source: 'supergram-landing',
       ts: new Date().toISOString(),
     };
 
@@ -168,7 +168,7 @@
       // Successful submission
       recordLocal();
       successDiv.textContent =
-        'Thank you for signing up! We have received your details.';
+        "You're on the Supergram list! Thanks for joining Supergram early access. We'll email your invite soon.";
       successDiv.style.display = 'block';
       return;
     } else if (serverResponse && serverResponse.error) {
@@ -178,7 +178,7 @@
       if (msg.includes('duplicate')) {
         recordLocal();
         successDiv.textContent =
-          'You are already on our list. We appreciate your enthusiasm!';
+        'You are already on our list. Thanks for your enthusiasm!';
         successDiv.style.display = 'block';
         return;
       }
